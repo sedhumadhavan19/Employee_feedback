@@ -88,3 +88,17 @@ a:visited{
 .txt-cntr{
 	text-align: center;
 }
+.pb-20px{
+	padding-bottom: 20px;
+}
+.txt-box-style{
+  border: 2px solid #eee;
+  width: 271px;
+  height: 40px;
+}
+.form-inputs{
+	color: #2684ef;
+}
+.description-box{
+	border: 2px solid #eee;
+}

@@ -5,7 +5,7 @@
 		.content-quote	
 			h3 We all need people who will give us feedback. That's how we improve.
 	.pt-70px.container
-		.txt-cntr
+		.form-inputs.pb-20px.col-md-12
 			h2 Feedback Type
 			form
 			  label.checkbox-inline
@@ -17,25 +17,28 @@
 		  
 		= simple_form_for(@employee) do |f|
 		  = f.error_notification
-		  .txt-cntr
-			  .form-inputs.col-md-6
+		  .div
+			  .form-inputs.col-md-6.pb-20px
 			  	label First Name
-			  	= f.input :first_name,label: false
-			  .form-inputs.col-md-6
+			  	= f.input :first_name,label: false, input_html: {class: "txt-box-style"}
+			  .form-inputs.col-md-6.pb-20px
 			  	label Last Name
-			  	= f.input :last_name,label: false
-			  .form-inputs.col-md-6	
+			  	= f.input :last_name,label: false, input_html: {class: "txt-box-style"}
+			  .form-inputs.col-md-6.pb-20px	
 			  	label Designation
-			    = f.input :designation,label: false
-			  .form-inputs.col-md-6 
+			    = f.input :designation,label: false, input_html: {class: "txt-box-style"}
+			  .form-inputs.col-md-6.pb-20px 
 			  	label Email
-			    = f.input :email,label: false
-			  .form-inputs.col-md-12
+			    = f.input :email,label: false, input_html: {class: "txt-box-style"}
+			  .form-inputs.col-md-6.pb-20px
 			  	label Contact Number 
-			    = f.input :phone_number,label: false
-			  .form-inputs.col-md-12
+			    = f.input :phone_number,label: false, input_html: {class: "txt-box-style"}
+			  .form-inputs.col-md-6.pb-20px
+			  	label FeedBack Regarding 
+			    = f.input :regarding_field,label: false, as: :text, input_html: {class: "txt-box-style"}
+			  .form-inputs.col-md-12.pb-20px
 			  	label Description Feedback* 
-			    = f.input :feedback_description,label: false, as: :text, autofocus: true, :input_html => {:style => 'width: 100%', :rows => 5}
+			    = f.input :feedback_description,label: false, as: :text, autofocus: true, :input_html => {:style => 'width: 76%', :rows => 5, class: "description-box"}
 
-			  .form-actions
-			    = f.button :submit
+			  .form-actions.col-md-12
+			    = f.button :submit, 'Submit Form !'
