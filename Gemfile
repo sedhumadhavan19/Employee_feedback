@@ -15,6 +15,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 #paperclip
 gem "paperclip", "~> 5.0.0"
+#fabrication
+gem 'fabrication'
 
 #slim
 gem "slim-rails"

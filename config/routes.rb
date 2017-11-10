@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   namespace :visitors do
   	get :index
   end
-  post 'FeedBack_Form', :to=>"visitors#feedback_form"
+  root :to => "visitors#index"
 end

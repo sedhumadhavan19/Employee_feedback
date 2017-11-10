@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'Importing users'
+
+Fabricate(:employees, email: 'mkv@commutatus.com')
+Fabricate(:employees, email: 'sedhu@commutatus.com')
+
+puts 'Admin role for user'
+Fabricate(:user, email: 'mkv@commutatus.com', admin: true)
