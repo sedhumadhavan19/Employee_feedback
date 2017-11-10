@@ -13,6 +13,8 @@ gem 'pg', '~> 0.18.4'
 #jquery
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+#paperclip
+gem "paperclip", "~> 5.0.0"
 
 #slim
 gem "slim-rails"
