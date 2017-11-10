@@ -1,13 +1,41 @@
-= simple_form_for(@employee) do |f|
-  = f.error_notification
+.background-color-wt
+	.feedback-banner
+		.content-head
+			h1 Feed Back
+		.content-quote	
+			h3 We all need people who will give us feedback. That's how we improve.
+	.pt-70px.container
+		.txt-cntr
+			h2 Feedback Type
+			form
+			  label.checkbox-inline
+			    input type="checkbox" value="" 
+			    | Comments
+			  label.checkbox-inline
+			    input type="checkbox" value="" 
+			    | Question
+		  
+		= simple_form_for(@employee) do |f|
+		  = f.error_notification
+		  .txt-cntr
+			  .form-inputs.col-md-6
+			  	label First Name
+			  	= f.input :first_name,label: false
+			  .form-inputs.col-md-6
+			  	label Last Name
+			  	= f.input :last_name,label: false
+			  .form-inputs.col-md-6	
+			  	label Designation
+			    = f.input :designation,label: false
+			  .form-inputs.col-md-6 
+			  	label Email
+			    = f.input :email,label: false
+			  .form-inputs.col-md-12
+			  	label Contact Number 
+			    = f.input :phone_number,label: false
+			  .form-inputs.col-md-12
+			  	label Description Feedback* 
+			    = f.input :feedback_description,label: false, as: :text, autofocus: true, :input_html => {:style => 'width: 100%', :rows => 5}
 
-  .form-inputs
-  	= f.input :name
-    = f.input :designation
-    = f.input :email
-    = f.input :phone_number
-    = f.input :feedback_type
-    = f.input :feedback_description
-
-  .form-actions
-    = f.button :submit
+			  .form-actions
+			    = f.button :submit

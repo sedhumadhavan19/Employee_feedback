@@ -1,0 +1,8 @@
+.background-color
+	.banner
+		.welcome-user-name
+			h1 Hai, @user name
+		.date-time	
+			h1 #{DateTime.now.strftime("%A, %d %b %Y %l:%M %p")}
+		.home-feedbtn
+			= link_to 'For FeedBack',  new_employee_path,  class: "btn btn-primary btn-lg btn-font"

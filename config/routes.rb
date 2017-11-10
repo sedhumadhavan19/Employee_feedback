@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   resources :employees
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :visitors do
+  	get :index
+  end
+  post 'FeedBack_Form', :to=>"visitors#feedback_form"
 end
