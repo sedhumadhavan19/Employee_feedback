@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Feedback type:
+  = @feedback_comment.feedback_type
+p
+  strong Feedback description:
+  = @feedback_comment.feedback_description
+p
+  strong Regarding field:
+  = @feedback_comment.regarding_field
+p
+  strong Employee:
+  = @feedback_comment.Employee
+
+=> link_to 'Edit', edit_feedback_comment_path(@feedback_comment)
+'|
+=< link_to 'Back', feedback_comments_path

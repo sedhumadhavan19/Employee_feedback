@@ -1,0 +1,11 @@
+= simple_form_for(@feedback_comment) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :feedback_type
+    = f.input :feedback_description
+    = f.input :regarding_field
+    = f.association :Employee
+
+  .form-actions
+    = f.button :submit

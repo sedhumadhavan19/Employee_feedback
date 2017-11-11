@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  feedback_type: MyString
+  feedback_description: MyString
+  regarding_field: MyString
+  Employee: one
+
+two:
+  feedback_type: MyString
+  feedback_description: MyString
+  regarding_field: MyString
+  Employee: two

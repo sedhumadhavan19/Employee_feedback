@@ -1,0 +1,27 @@
+h1 Listing feedback_comments
+
+table
+  thead
+    tr
+      th Feedback type
+      th Feedback description
+      th Regarding field
+      th Employee
+      th
+      th
+      th
+
+  tbody
+    - @feedback_comments.each do |feedback_comment|
+      tr
+        td = feedback_comment.feedback_type
+        td = feedback_comment.feedback_description
+        td = feedback_comment.regarding_field
+        td = feedback_comment.Employee
+        td = link_to 'Show', feedback_comment
+        td = link_to 'Edit', edit_feedback_comment_path(feedback_comment)
+        td = link_to 'Destroy', feedback_comment, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Feedback comment', new_feedback_comment_path
