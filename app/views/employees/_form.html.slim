@@ -33,12 +33,11 @@
 			  .form-inputs.col-md-6.pb-20px
 			  	label Contact Number 
 			    = f.input :phone_number,label: false, input_html: {class: "txt-box-style"}
-			  .form-inputs.col-md-6.pb-20px
-			  	label FeedBack Regarding 
-			    = f.input :regarding_field,label: false, as: :text, input_html: {class: "txt-box-style"}
-			  .form-inputs.col-md-12.pb-20px
-			  	label Description Feedback* 
-			    = f.input :feedback_description,label: false, as: :text, autofocus: true, :input_html => {:style => 'width: 76%', :rows => 5, class: "description-box"}
-
-			  .form-actions.col-md-12
-			    = f.button :submit, 'Submit Form !'
+			      
+				h4 FeedbackComment
+				#feedback_comment
+					= f.simple_fields_for :feedback_comments do |feedback_comment|
+						= render 'feedback_comment_fields', f: feedback_comment
+					.links
+						= link_to_add_association 'add', f, :feedback_comments
+				= f.submit class: "btn btn-default btn-lg"   

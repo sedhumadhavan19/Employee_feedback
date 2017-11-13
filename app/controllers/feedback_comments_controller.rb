@@ -69,6 +69,6 @@ class FeedbackCommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def feedback_comment_params
-      params.require(:feedback_comment).permit(:feedback_type, :feedback_description, :regarding_field, :Employee_id)
+      params.require(:feedback_comment).permit(:feedback_type, :feedback_description, :regarding_field, :employee_id)
     end
 end

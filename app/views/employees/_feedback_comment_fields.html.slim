@@ -1,0 +1,11 @@
+.nested-fields
+	.form-inputs.col-md-6.pb-20px
+		label FeedBack Regarding 
+		= f.input :regarding_field,label: false, input_html: {class: "txt-box-style"}
+	.form-inputs.col-md-6.pb-20px
+		label Feedback Type
+		= f.input :type,label: false, input_html: {class: "txt-box-style"}
+	.form-inputs.col-md-6.pb-20px 
+		label Description Feedback*
+		= f.input :description,label: false, as: :text, autofocus: true, :input_html => {:style => 'width: 76%', :rows => 5, class: "description-box"}
+	= link_to_remove_association "Remove FeedBack", f, class:"btn btn-danger"

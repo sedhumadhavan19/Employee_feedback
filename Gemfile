@@ -17,7 +17,8 @@ gem 'jquery-ui-rails'
 gem "paperclip", "~> 5.0.0"
 #fabrication
 gem 'fabrication'
-
+#cocon
+gem "cocoon"
 #slim
 gem "slim-rails"
 #simpleform

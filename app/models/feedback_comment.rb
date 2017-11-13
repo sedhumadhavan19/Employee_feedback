@@ -1,3 +1,3 @@
 class FeedbackComment < ApplicationRecord
-  belongs_to :Employee
+  belongs_to :employee
 end
