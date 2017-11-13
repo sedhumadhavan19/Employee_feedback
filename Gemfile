@@ -17,6 +17,8 @@ gem 'jquery-ui-rails'
 gem "paperclip", "~> 5.0.0"
 #fabrication
 gem 'fabrication'
+#sweetalert
+gem 'sweetalert-rails'
 #cocon
 gem "cocoon"
 #devise

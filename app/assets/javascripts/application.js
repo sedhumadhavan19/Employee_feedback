@@ -15,5 +15,6 @@
 //= require jquery
 //= require jquery-ui
 //= require cocoon
+//= require sweetalert
 //= require bootstrap
 //= require_tree .
