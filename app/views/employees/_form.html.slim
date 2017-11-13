@@ -8,28 +8,28 @@
 		= simple_form_for(@employee) do |f|
 		  = f.error_notification
 		  .div
-			  .form-inputs.col-md-6.pb-20px
+			  .form-inputs.col-md-6.pb-20px.pl-240px
 			  	label First Name
 			  	= f.input :first_name,label: false, input_html: {class: "txt-box-style"}
 			  .form-inputs.col-md-6.pb-20px
 			  	label Last Name
 			  	= f.input :last_name,label: false, input_html: {class: "txt-box-style"}
-			  .form-inputs.col-md-6.pb-20px	
+			  .form-inputs.col-md-6.col-xs-6.pb-20px.pl-240px
 			  	label Designation
 			    = f.input :designation,label: false, input_html: {class: "txt-box-style"}
 			  .form-inputs.col-md-6.pb-20px 
 			  	label Email
 			    = f.input :email,label: false, input_html: {class: "txt-box-style"}
-			  .form-inputs.col-md-12.pb-20px
+			  .form-inputs.col-md-12.pb-20px.pl-240px
 			  	label Contact Number 
 			    = f.input :phone_number,label: false, input_html: {class: "txt-box-style"}
 			  .div    
-					h4.pt-50px Click 'Add Feedback' Button For Your Feedback's
+					h4.pt-50px.pl-240px Click 'Add Feedback' Button For Your Feedback's
 					#feedback_comment
 						= f.simple_fields_for :feedback_comments do |feedback_comment|
 							= render 'feedback_comment_fields', f: feedback_comment
-						.links.col-md-6.pb-20px
+						.links.col-md-6.pb-20px.pl-240px
 							= link_to_add_association 'Add Feedback', f, :feedback_comments, class: "btn btn-info"
-					.col-md-12.pb-20px
+					.col-md-12.pb-20px.pl-240px
 						= f.button :submit, 'Submit Form !', class: "btn btn-primary btn-lg", id:"feedback_submit"
 						   

@@ -83,6 +83,14 @@ a:visited{
 	width: 70%;
 	left: 20%;
 }
+@media screen and (max-width: 1280px){
+	.content-quote h3{
+		font-size: 44px;
+	}
+}
+.pl-240px{
+	padding-left: 240px;
+}
 .pt-70px{
 	padding-top: 70px;
 }
@@ -94,6 +102,9 @@ a:visited{
 }
 .pb-20px{
 	padding-bottom: 20px;
+}
+.bg-white{
+	background-color: #fff;
 }
 .txt-box-style{
   border: 2px solid #eee;

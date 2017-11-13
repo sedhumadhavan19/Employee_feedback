@@ -5,3 +5,9 @@
 
 $(document).on 'click', '#feedback_submit', () ->
 	swal("Success", "Your feedback has been sent", "success");
+
+
+$(document).on 'click', '#remove-btn', () ->
+	swal("Are you sure you want to do this?", {
+	  buttons: ["Yes", "No"],
+	});
