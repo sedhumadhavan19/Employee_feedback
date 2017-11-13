@@ -19,6 +19,8 @@ gem "paperclip", "~> 5.0.0"
 gem 'fabrication'
 #cocon
 gem "cocoon"
+#devise
+gem 'devise'
 #slim
 gem "slim-rails"
 #simpleform
