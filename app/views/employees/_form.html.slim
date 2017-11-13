@@ -5,16 +5,6 @@
 		.content-quote	
 			h3 We all need people who will give us feedback. That's how we improve.
 	.pt-70px.container
-		.form-inputs.pb-20px.col-md-12
-			h2 Feedback Type
-			form
-			  label.checkbox-inline
-			    input type="checkbox" value="" 
-			    | Comments
-			  label.checkbox-inline
-			    input type="checkbox" value="" 
-			    | Question
-		  
 		= simple_form_for(@employee) do |f|
 		  = f.error_notification
 		  .div
@@ -34,10 +24,10 @@
 			  	label Contact Number 
 			    = f.input :phone_number,label: false, input_html: {class: "txt-box-style"}
 			      
-				h4 FeedbackComment
+				h4.pt-50px Click 'Add Feedback' Button For Your Feedback's
 				#feedback_comment
 					= f.simple_fields_for :feedback_comments do |feedback_comment|
 						= render 'feedback_comment_fields', f: feedback_comment
-					.links
-						= link_to_add_association 'add', f, :feedback_comments
-				= f.submit class: "btn btn-default btn-lg"   
+					.links.pb-20px
+						= link_to_add_association 'Add Feedback', f, :feedback_comments, class: "btn btn-info"
+				= f.submit class: "btn btn-primary btn-lg"   
