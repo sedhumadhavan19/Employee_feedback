@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20171113060330) do
   create_table "feedback_comments", force: :cascade do |t|
     t.string "type"
     t.string "description"
-    t.string "regarding_field"
+    t.text "regarding_field"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "employee_id"

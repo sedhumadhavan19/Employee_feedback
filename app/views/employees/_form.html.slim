@@ -20,14 +20,16 @@
 			  .form-inputs.col-md-6.pb-20px 
 			  	label Email
 			    = f.input :email,label: false, input_html: {class: "txt-box-style"}
-			  .form-inputs.col-md-6.pb-20px
+			  .form-inputs.col-md-12.pb-20px
 			  	label Contact Number 
 			    = f.input :phone_number,label: false, input_html: {class: "txt-box-style"}
-			      
-				h4.pt-50px Click 'Add Feedback' Button For Your Feedback's
-				#feedback_comment
-					= f.simple_fields_for :feedback_comments do |feedback_comment|
-						= render 'feedback_comment_fields', f: feedback_comment
-					.links.pb-20px
-						= link_to_add_association 'Add Feedback', f, :feedback_comments, class: "btn btn-info"
-				= f.submit class: "btn btn-primary btn-lg"   
+			  .div    
+					h4.pt-50px Click 'Add Feedback' Button For Your Feedback's
+					#feedback_comment
+						= f.simple_fields_for :feedback_comments do |feedback_comment|
+							= render 'feedback_comment_fields', f: feedback_comment
+						.links.col-md-6.pb-20px
+							= link_to_add_association 'Add Feedback', f, :feedback_comments, class: "btn btn-info"
+					.col-md-12.pb-20px
+						= f.button :submit, 'Submit Form !', class: "btn btn-primary btn-lg" 
+						/ = f.submit class: "btn btn-primary btn-lg"   
